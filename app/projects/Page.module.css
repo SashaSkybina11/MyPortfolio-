@@ -1,43 +1,47 @@
-.main {
-  max-width: 1200px;
+.containerProjects {
+  padding: 60px 100px 574px 450px;
+
   position: relative;
-}
-
-.content {
-  max-width: 1150px;
-  height: auto;
-  padding-left: 100px;
-  padding-top: 100px;
-  position: relative;
-
-  /* text-transform: capitalize; */
-  font-family: var(--font-family);
-  color: var(--white);
-  line-height: 347%;
-  line-height: 170%;
-
-  user-select: none;
-
-  z-index: 2;
 }
 
 .title {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 61px;
+  height: 1px;
+  background-color: var(--rose);
+  margin-top: 12px;
+}
+
+.listCard {
+  display: flex;
+  gap: 60px;
+}
+
+.card {
+  width: 360px;
+  height: 375px;
+}
+
+.cardImg {
+  width: 359px;
+  height: 269px;
+}
+
+.cardName {
+  font-family: var(--font-family);
   font-weight: 400;
-  font-size: 140px;
-  margin-bottom: 140px;
-}
-
-.title span {
-  color: var(--rose);
-}
-
-.descr {
-  font-size: 50px;
-  line-height: 170%;
-}
-
-.descr span {
-  color: var(--rose);
+  font-size: 21px;
+  line-height: 175%;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #fff;
 }
 
 /* Lines */
@@ -47,15 +51,12 @@
   width: 2200px;
   height: 95px;
 
-  /* top: -210px;
-  right: -600px;
-  transform: rotate(218deg); */
+  /* transform: translate(-70%, 250%) rotate(190deg); */
 
-  left: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
 
-  transform: translate(-8%, -35%) rotate(218deg);
-
+  transform: translate(-50%, -50%) rotate(190deg);
   background: var(--white);
 
   z-index: 3;
@@ -78,9 +79,7 @@
   width: 2000px;
   height: 90px;
 
-  left: -40px;
-  bottom: -100px;
-  transform: rotate(347deg);
+  transform: translate(-60%, 40%) rotate(288deg);
 
   background-color: var(--grey);
   /* border: 5px solid var(--grey); */
@@ -105,7 +104,7 @@
 }
 
 .grayLine .track {
-  animation: scrollRight 40s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .dot {
@@ -185,7 +184,7 @@
 
   position: absolute;
   top: -205px;
-  left: 176px;
+  left: 170px;
 
   color: transparent;
   -webkit-text-stroke: 2px #363636;

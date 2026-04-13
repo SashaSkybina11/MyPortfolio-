@@ -1,43 +1,60 @@
-.main {
-  max-width: 1200px;
-  position: relative;
+.containerContact {
 }
 
 .content {
-  max-width: 1150px;
-  height: auto;
-  padding-left: 100px;
-  padding-top: 100px;
+  padding: 60px 100px 574px 574px;
+
   position: relative;
-
-  /* text-transform: capitalize; */
-  font-family: var(--font-family);
-  color: var(--white);
-  line-height: 347%;
-  line-height: 170%;
-
-  user-select: none;
-
-  z-index: 2;
 }
 
 .title {
-  font-weight: 400;
-  font-size: 140px;
-  margin-bottom: 140px;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
 }
 
-.title span {
-  color: var(--rose);
+.title::after {
+  content: "";
+  display: block;
+  width: 61px;
+  height: 1px;
+  background-color: var(--rose);
+  margin-top: 12px;
 }
 
 .descr {
-  font-size: 50px;
-  line-height: 170%;
+  font-family: var(--font-family);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--white);
+
+  display: flex;
+  gap: 95px;
+  position: relative;
+  z-index: 3;
 }
 
-.descr span {
-  color: var(--rose);
+.descrItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.descrTitle {
+  font-size: 32px;
+  line-height: 160%;
+
+  text-transform: uppercase;
+}
+
+.descrLink {
+  font-size: 16px;
+  line-height: 190%;
+
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-decoration-color: var(--rose);
 }
 
 /* Lines */
@@ -47,14 +64,7 @@
   width: 2200px;
   height: 95px;
 
-  /* top: -210px;
-  right: -600px;
-  transform: rotate(218deg); */
-
-  left: 0;
-  top: 0;
-
-  transform: translate(-8%, -35%) rotate(218deg);
+  transform: translate(-40%, 250%) rotate(169deg);
 
   background: var(--white);
 
@@ -78,9 +88,11 @@
   width: 2000px;
   height: 90px;
 
-  left: -40px;
+  /* left: -40px;
   bottom: -100px;
-  transform: rotate(347deg);
+  transform: rotate(347deg); */
+
+  transform: translate(-85%, 40%) rotate(316deg);
 
   background-color: var(--grey);
   /* border: 5px solid var(--grey); */
@@ -105,7 +117,7 @@
 }
 
 .grayLine .track {
-  animation: scrollRight 40s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .dot {
@@ -175,8 +187,7 @@
   animation-play-state: paused;
 }
 
-/* Content behind */
-
+/* Behind */
 .behind {
   font-weight: 400;
   font-size: 454px;
@@ -185,7 +196,7 @@
 
   position: absolute;
   top: -205px;
-  left: 176px;
+  left: 170px;
 
   color: transparent;
   -webkit-text-stroke: 2px #363636;

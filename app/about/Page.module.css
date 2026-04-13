@@ -1,39 +1,63 @@
-.main {
-  max-width: 1200px;
+.containerAbout {
+  max-width: 1600px;
+  height: 100%;
+
+  padding: 90px 100px 120px 300px;
+
+  display: flex;
+  flex-direction: row;
+  gap: 107px;
+
   position: relative;
 }
 
-.content {
-  max-width: 1150px;
-  height: auto;
-  padding-left: 100px;
-  padding-top: 100px;
+.image {
   position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 3;
+}
 
-  /* text-transform: capitalize; */
+.contentAbout {
+  max-width: 700px;
+  height: 100%;
+
   font-family: var(--font-family);
+  font-weight: 400;
+  line-height: 190%;
+  letter-spacing: 0.02em;
   color: var(--white);
-  line-height: 347%;
-  line-height: 170%;
 
-  user-select: none;
-
-  z-index: 2;
+  z-index: 3;
 }
 
 .title {
-  font-weight: 400;
-  font-size: 140px;
-  margin-bottom: 140px;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 70px;
 }
 
-.title span {
-  color: var(--rose);
+.title::after {
+  content: "";
+  display: block;
+  width: 61px;
+  height: 1px;
+  background-color: var(--rose);
+  margin-top: 12px;
 }
 
 .descr {
-  font-size: 50px;
-  line-height: 170%;
+  font-size: 22px;
+}
+
+.descr p {
+  margin-bottom: 25px;
+}
+
+.descr p:last-child {
+  margin-bottom: 0;
 }
 
 .descr span {
@@ -47,14 +71,7 @@
   width: 2200px;
   height: 95px;
 
-  /* top: -210px;
-  right: -600px;
-  transform: rotate(218deg); */
-
-  left: 0;
-  top: 0;
-
-  transform: translate(-8%, -35%) rotate(218deg);
+  transform: translate(-72%, 40%) rotate(218deg);
 
   background: var(--white);
 
@@ -78,9 +95,11 @@
   width: 2000px;
   height: 90px;
 
-  left: -40px;
+  /* left: -40px;
   bottom: -100px;
-  transform: rotate(347deg);
+  transform: rotate(347deg); */
+
+  transform: translate(-55%, 40%) rotate(305deg);
 
   background-color: var(--grey);
   /* border: 5px solid var(--grey); */
@@ -105,7 +124,7 @@
 }
 
 .grayLine .track {
-  animation: scrollRight 40s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 .dot {
@@ -185,7 +204,7 @@
 
   position: absolute;
   top: -205px;
-  left: 176px;
+  left: 170px;
 
   color: transparent;
   -webkit-text-stroke: 2px #363636;

@@ -27,14 +27,15 @@
 }
 
 .icon {
-  fill: var(--orange);
+  fill: var(--rose);
   transition:
     transform 0.2s ease,
     fill 0.2s ease;
 }
 
 .icon:hover {
-  fill: rgb(255, 192, 74);
+  /* fill: rgb(255, 192, 74); */
+  fill: rgb(182, 14, 89);
   transform: scale(1.3);
 }
 
@@ -57,12 +58,12 @@
 }
 
 .logoDescr span:not(.dot):hover {
-  color: var(--orange);
+  color: var(--rose);
   transform: scale(1.2) translateY(-2px);
 }
 
 .logoDescr span.dot {
-  color: var(--orange);
+  color: var(--rose);
 }
 
 /* Navigation */
@@ -78,6 +79,7 @@
 .item {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 48px;
 }
 
@@ -121,5 +123,17 @@
 }
 
 .itemLink:hover {
-  color: var(--orange);
+  color: var(--rose);
+}
+
+.dotActive {
+  width: 8px;
+  height: 8px;
+
+  background: var(--rose);
+  border-radius: 50%;
+
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
 }

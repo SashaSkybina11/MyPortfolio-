@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import css from "./Header.module.css";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
   return (
     <header className={css.header}>
       <ul className={css.social}>
@@ -51,23 +55,26 @@ const Header = () => {
       <nav>
         <ul className={css.nav}>
           <li className={css.item}>
-            <Link className={css.itemLink} href="">
-              home
+            <Link className={css.itemLink} href="/">
+              {pathname === "/" && <span className={css.dotActive} />}home
             </Link>
           </li>
           <li className={css.item}>
-            <Link className={css.itemLink} href="">
-              contact
+            <Link className={css.itemLink} href="/about">
+              {pathname === "/about" && <span className={css.dotActive} />}{" "}
+              about me
             </Link>
           </li>
           <li className={css.item}>
-            <Link className={css.itemLink} href="">
+            <Link className={css.itemLink} href="/projects">
+              {pathname === "/projects" && <span className={css.dotActive} />}{" "}
               projects
             </Link>
           </li>
           <li className={css.item}>
-            <Link className={css.itemLink} href="">
-              about me
+            <Link className={css.itemLink} href="/contact">
+              {pathname === "/contact" && <span className={css.dotActive} />}
+              contact
             </Link>
           </li>
         </ul>
