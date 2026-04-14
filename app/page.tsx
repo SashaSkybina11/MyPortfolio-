@@ -3,14 +3,14 @@ import css from "./Page.module.css";
 
 const Page = () => {
   return (
-    <main className={css.main}>
+    <main className={`page-shell page-container ${css.main}`}>
       <div className={css.content}>
         <h1 className={css.title}>
           Hello World<span>!</span>
         </h1>
         <p className={css.descr}>
-          Welcome To My <span>Portfolio</span>! I’m Sasha, a{" "}
-          <span>Frontent</span> Developer.
+          Welcome To My <span>Portfolio</span>! I&#8217;m Sasha, a
+          <span> Frontent</span> Developer.
         </p>
       </div>
       <div className={css.whiteLine}>

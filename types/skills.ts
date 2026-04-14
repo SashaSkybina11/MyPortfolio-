@@ -1,4 +1,4 @@
-export const skills = [
+export const skills: string[] = [
   "DEVELOPER",
   "FRONTEND",
   "HTML",

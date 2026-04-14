@@ -15,14 +15,24 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <svg className={css.icon} width="30" height="30">
+            <svg
+              className={css.icon}
+              width="30"
+              height="30"
+              aria-label="github profile"
+            >
               <use href="/icons/symbol-defs.svg#icon-github" />
             </svg>
           </a>
         </li>
         <li className={css.socialLink}>
           <a href="mailto:sashaskibina16@gmail.com" aria-label="Send email">
-            <svg className={css.icon} width="30" height="30">
+            <svg
+              className={css.icon}
+              width="30"
+              height="30"
+              aria-label="email address"
+            >
               <use href="/icons/symbol-defs.svg#icon-email" />
             </svg>
           </a>
@@ -31,15 +41,21 @@ const Header = () => {
           <a
             href="https://www.linkedin.com/in/oleksandraskybina/"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer
+            "
           >
-            <svg className={css.icon} width="30" height="30">
+            <svg
+              className={css.icon}
+              width="30"
+              height="30"
+              aria-label="linkedin profile"
+            >
               <use href="/icons/symbol-defs.svg#icon-linkedin" />
             </svg>
           </a>
         </li>
       </ul>
-      <Link href={""} className={css.logo}>
+      <Link href="/" className={css.logo}>
         <p className={css.logoDescr}>
           <span>O</span>
           <span className={css.dot}>.</span>
@@ -60,9 +76,9 @@ const Header = () => {
             </Link>
           </li>
           <li className={css.item}>
-            <Link className={css.itemLink} href="/about">
-              {pathname === "/about" && <span className={css.dotActive} />}{" "}
-              about me
+            <Link className={css.itemLink} href="/contact">
+              {pathname === "/contact" && <span className={css.dotActive} />}
+              contact
             </Link>
           </li>
           <li className={css.item}>
@@ -72,9 +88,9 @@ const Header = () => {
             </Link>
           </li>
           <li className={css.item}>
-            <Link className={css.itemLink} href="/contact">
-              {pathname === "/contact" && <span className={css.dotActive} />}
-              contact
+            <Link className={css.itemLink} href="/about">
+              {pathname === "/about" && <span className={css.dotActive} />}{" "}
+              about me
             </Link>
           </li>
         </ul>

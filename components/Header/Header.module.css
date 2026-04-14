@@ -10,7 +10,8 @@
   align-items: center;
 
   position: relative;
-  z-index: 10;
+  z-index: 5;
+  background: var(--background);
 }
 
 /* social links */
@@ -48,7 +49,7 @@
 .logoDescr span {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 50px;
+  font-size: 38px;
 
   cursor: pointer;
   color: var(--white);

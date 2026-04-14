@@ -1,17 +1,14 @@
 .containerAbout {
-  max-width: 1600px;
-  height: 100%;
-
-  padding: 90px 100px 120px 300px;
-
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
+  align-items: start;
   gap: 107px;
-
+  padding-top: 30px;
   position: relative;
 }
 
 .image {
+  flex: 0 0 300px;
   position: relative;
   width: 300px;
   height: 300px;
@@ -21,6 +18,7 @@
 }
 
 .contentAbout {
+  flex: 0 0 700px;
   max-width: 700px;
   height: 100%;
 
@@ -65,17 +63,31 @@
 }
 
 /* Lines */
+
+.whiteLine,
+.grayLine {
+  user-select: none;
+  pointer-events: none;
+}
+
+.whiteLine {
+  z-index: 20;
+}
+
+.grayLine {
+  z-index: 15;
+}
+
 .whiteLine {
   position: absolute;
-
+  top: 0;
+  left: 0;
   width: 2200px;
   height: 95px;
-
   transform: translate(-72%, 40%) rotate(218deg);
+  /* transform: translate(-40%, 40%) rotate(129deg); */
 
   background: var(--white);
-
-  z-index: 3;
   border: 5px solid var(--grey);
   box-shadow:
     0 0 0 0 #000,
@@ -84,25 +96,19 @@
     0 239px 143px 0 rgba(0, 0, 0, 0.5),
     0 425px 170px 0 rgba(0, 0, 0, 0.15),
     0 664px 186px 0 rgba(0, 0, 0, 0.02);
-
-  user-select: none;
 }
 
 .grayLine {
   position: absolute;
-  z-index: 1;
+  top: 0;
+  left: 0;
 
   width: 2000px;
   height: 90px;
-
-  /* left: -40px;
-  bottom: -100px;
-  transform: rotate(347deg); */
-
-  transform: translate(-55%, 40%) rotate(305deg);
+  transform: translate(-40%, 40%) rotate(305deg);
+  /* transform: translate(-7%, 680%) rotate(17deg); */
 
   background-color: var(--grey);
-  /* border: 5px solid var(--grey); */
   box-shadow:
     0 0 0 0 #000,
     0 27px 58px 0 rgba(0, 0, 0, 0.98),
@@ -110,8 +116,6 @@
     0 239px 143px 0 rgba(0, 0, 0, 0.5),
     0 425px 170px 0 rgba(0, 0, 0, 0.15),
     0 664px 186px 0 rgba(0, 0, 0, 0.02);
-
-  user-select: none;
 }
 
 .track {
@@ -124,7 +128,7 @@
 }
 
 .grayLine .track {
-  animation: scroll 40s linear infinite;
+  animation: scrollRight 40s linear infinite;
 }
 
 .dot {

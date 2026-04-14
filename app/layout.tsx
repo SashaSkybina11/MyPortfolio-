@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     url: "",
     images: [
       {
-        url: "https://your-domain.com/og-image.jpg",
+        url: "",
         width: 1200,
         height: 630,
         alt: "Oleksandra Skybina Portfolio Preview",

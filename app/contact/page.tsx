@@ -3,8 +3,8 @@ import css from "./Page.module.css";
 
 const Page = () => {
   return (
-    <div className={css.containerContact}>
-      <div className={css.content}>
+    <main className={`page-shell page-container ${css.containerContact}`}>
+      <div className={css.contentContact}>
         <h1 className={css.title}>Contact</h1>
         <div className={css.descr}>
           <div className={css.descrItem}>
@@ -60,7 +60,7 @@ const Page = () => {
         </div>
         <div className={css.behind}>Contact</div>
       </div>
-    </div>
+    </main>
   );
 };
 
