@@ -53,19 +53,78 @@
   width: 100%;
 }
 
+.cardMedia {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.cardMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.1),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.cardLink:hover .cardMedia::after {
+  opacity: 1;
+}
+
 .cardImg {
   width: 100%;
   height: 220px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 10px;
-  filter: brightness(0.7);
+  filter: blur(1.5px);
+
+  /* filter: brightness(0.75); */
   transition: all 0.3s ease;
 }
 
+.cardDescr {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 175%;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--rose);
+
+  padding: 30px;
+
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+
+  opacity: 0;
+  filter: blur(6px);
+  transition:
+    transform 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 400ms ease,
+    filter 600ms ease;
+}
+
+.cardLink:hover .cardDescr {
+  transform: translateY(0);
+  opacity: 1;
+  filter: blur(0);
+}
+
 .cardLink:hover .cardImg {
-  transform: scale(1.05);
-  filter: brightness(0.85);
+  transform: scale(1.08);
 }
 
 .cardName {

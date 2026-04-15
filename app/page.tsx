@@ -1,5 +1,5 @@
-import { skills } from "@/types/skills";
 import css from "./Page.module.css";
+import { skills } from "@/types/skills";
 
 const Page = () => {
   return (
@@ -33,6 +33,7 @@ const Page = () => {
           ))}
         </div>
       </div>
+
       <div className={css.behind}>dev</div>
     </main>
   );

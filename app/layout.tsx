@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Roboto, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
+import PageTransition from "@/components/PageTransition/PageTransition";
 
 const poppins = Poppins({
   variable: "--font-family",
@@ -54,8 +55,7 @@ export default function RootLayout({
     >
       <body>
         <Header />
-
-        {children}
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

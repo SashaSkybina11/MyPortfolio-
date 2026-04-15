@@ -73,13 +73,16 @@ const Page = () => {
                     rel="noopener noreferrer"
                     className={css.cardLink}
                   >
-                    <Image
-                      className={css.cardImg}
-                      src={project.imageSrc}
-                      alt={project.imageAlt}
-                      width={400}
-                      height={200}
-                    />
+                    <div className={css.cardMedia}>
+                      <Image
+                        className={css.cardImg}
+                        src={project.imageSrc}
+                        alt={project.imageAlt}
+                        width={350}
+                        height={200}
+                      />
+                      <p className={css.cardDescr}>{project.descr}</p>
+                    </div>
                     <p className={css.cardName}>{project.name}</p>
                   </a>
                 </article>
