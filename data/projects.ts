@@ -7,13 +7,14 @@ export const projects: Project[] = [
     imageSrc: "/project/notes-app.png",
     imageAlt: "Notes app preview",
     descr:
-      "This app lets you easily create and manage notes for yourself. You can use it to write down ideas, reminders, tasks, or anything else you want to keep track of.Start by creating your first note and keep all your important thoughts in one place.",
+      "Is a web application for creating, organizing, and searching personal notes with user authentication and profile support. It was built with Next.js and React using TypeScript, TanStack Query for data fetching, Zustand for state management, and integrates with an external backend API for authentication and note storage.",
   },
   {
     name: "food delivery app",
     href: "https://delivery-app-international-food-delivery-production.up.railway.app/",
     imageSrc: "/project/international-food-delivery.png",
     imageAlt: "Food delivery app preview",
-    descr: "Spain and Ukraine in one delivery app",
+    descr:
+      "This is an  food delivery web app where users can browse shops, view products, add items to a cart, and place orders. Delivery app task built with Next.js, TypeScript, HTML/CSS, SQLite, and iziToast. ",
   },
 ];

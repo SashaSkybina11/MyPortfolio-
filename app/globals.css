@@ -27,6 +27,9 @@ body {
   color: var(--white);
   font-family: var(--font-family), sans-serif;
   overflow: hidden;
+
+  opacity: 0;
+  animation: fadeIn 3s ease forwards;
 }
 
 .page-shell {
@@ -40,6 +43,15 @@ body {
   margin: 0;
   padding-inline: 50px;
   scroll-snap-type: x mandatory;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* 

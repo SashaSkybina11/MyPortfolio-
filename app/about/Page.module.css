@@ -48,6 +48,7 @@
 
 .descr {
   font-size: 22px;
+  padding-right: 50px;
 }
 
 .descr p {
@@ -67,7 +68,6 @@
 .whiteLine,
 .grayLine {
   user-select: none;
-  pointer-events: none;
 }
 
 .whiteLine {
@@ -80,11 +80,13 @@
 
 .whiteLine {
   position: absolute;
-  top: 0;
-  left: 0;
+
   width: 2200px;
   height: 95px;
-  transform: translate(-72%, 40%) rotate(218deg);
+
+  top: 150px;
+  left: 0px;
+  transform: translate(-62%, 0%) rotate(211deg);
   /* transform: translate(-40%, 40%) rotate(129deg); */
 
   background: var(--white);

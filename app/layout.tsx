@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins, Roboto, Open_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
-import PageTransition from "@/components/PageTransition/PageTransition";
 
 const poppins = Poppins({
   variable: "--font-family",
@@ -23,18 +22,21 @@ export const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Oleksandra Skybina | Frontend Developer Portfolio",
+  title: "O.Skybina | Portfolio Frontend Developer",
   description:
     "Portfolio of Oleksandra Skybina, a Frontend Developer specializing in modern web technologies. Explore projects, skills, and experience in building responsive and user-friendly web applications.",
+  icons: {
+    icon: "/icons/portfolio-bag.svg",
+  },
 
   openGraph: {
-    title: "Oleksandra Skybina | Frontend Developer Portfolio",
+    title: "O.Skybina | Portfolio Frontend Developer",
     description:
       "Explore the portfolio of Oleksandra Skybina — frontend developer creating modern, responsive, and user-focused web applications.",
     url: "",
     images: [
       {
-        url: "",
+        url: "/meta-img.jpg",
         width: 1200,
         height: 630,
         alt: "Oleksandra Skybina Portfolio Preview",
@@ -55,7 +57,7 @@ export default function RootLayout({
     >
       <body>
         <Header />
-        <PageTransition>{children}</PageTransition>
+        {children}
       </body>
     </html>
   );
