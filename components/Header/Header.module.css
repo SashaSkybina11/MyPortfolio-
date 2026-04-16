@@ -31,13 +31,14 @@
 .icon {
   fill: var(--rose);
   transition:
-    transform 0.2s ease,
+    transform 0.6s ease,
     fill 0.2s ease;
 }
 
 .icon:hover {
   /* fill: rgb(255, 192, 74); */
-  fill: rgb(182, 14, 89);
+  fill: rgb(223, 25, 114);
+
   transform: scale(1.3);
 }
 

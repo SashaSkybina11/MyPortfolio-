@@ -10,7 +10,7 @@ const Page = () => {
         </h1>
         <p className={css.descr}>
           Welcome To My <span>Portfolio</span>! I&#8217;m Sasha, a
-          <span> Frontent</span> Developer.
+          <span> Frontend</span> Developer.
         </p>
       </div>
       <div className={css.whiteLine}>

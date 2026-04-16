@@ -45,7 +45,7 @@ const Page = () => {
           <p>
             Alongside my sports career, I&#8217;m also a Front-End Developer
             passionate about building modern and user-friendly web applications.
-            I work with technologies such as{" "}
+            I work with technologies such as
             <span> JavaScript, React, Next.js, HTML, CSS, and REST APIs.</span>
           </p>
           <p>

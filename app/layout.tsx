@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "O.Skybina | Portfolio Frontend Developer",
     description:
       "Explore the portfolio of Oleksandra Skybina — frontend developer creating modern, responsive, and user-focused web applications.",
-    url: "",
+    url: "https://my-portfolio-ebon-tau-56.vercel.app/",
     images: [
       {
         url: "/meta-img.jpg",
