@@ -23,6 +23,7 @@ export const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "O.Skybina | Portfolio Frontend Developer",
+  metadataBase: new URL("https://my-portfolio-ebon-tau-56.vercel.app/"),
   description:
     "Portfolio of Oleksandra Skybina, a Frontend Developer specializing in modern web technologies. Explore projects, skills, and experience in building responsive and user-friendly web applications.",
   icons: {
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     title: "O.Skybina | Portfolio Frontend Developer",
     description:
       "Explore the portfolio of Oleksandra Skybina — frontend developer creating modern, responsive, and user-focused web applications.",
-    url: "https://my-portfolio-ebon-tau-56.vercel.app/",
+    url: "/",
     images: [
       {
         url: "/meta-img.jpg",
