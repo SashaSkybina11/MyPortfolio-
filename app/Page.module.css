@@ -204,7 +204,7 @@
 
 .loading {
   color: var(--rose);
-  font-family: var(--second-family);
+  font-family: var(--font-third);
   font-size: 28px;
   font-weight: 600;
   text-align: center;
@@ -261,7 +261,7 @@
   background: var(--background);
   text-align: center;
   padding: 20px;
-  font-family: var(--second-family);
+  font-family: var(--font-third);
 }
 
 .titleError {
