@@ -2,6 +2,14 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    name: "AromaCraft",
+    href: "https://coffee-brand-website-kappa.vercel.app/",
+    imageSrc: "/project/aroma-craft.png",
+    imageAlt: "AromaCraft preview",
+    descr:
+      "AromaCraft is a responsive coffee brand landing page with a clean design, interactive UI, and mobile-friendly layout, built using HTML, CSS, and vanilla JavaScript.",
+  },
+  {
     name: "notes app",
     href: "https://project-notes-app-ten.vercel.app/",
     imageSrc: "/project/notes-app.png",

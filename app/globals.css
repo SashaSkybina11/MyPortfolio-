@@ -40,7 +40,7 @@ body {
   overflow: hidden;
 
   opacity: 0;
-  animation: fadeIn 3s ease forwards;
+  animation: fadeIn 4s ease forwards;
 }
 
 .page-shell {
