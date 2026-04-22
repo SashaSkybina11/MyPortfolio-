@@ -4,18 +4,18 @@ import "./globals.css";
 import Header from "@/components/Header/Header";
 
 const poppins = Poppins({
-  variable: "--font-family",
+  variable: "--font-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 const roboto = Roboto({
-  variable: "--second-family",
+  variable: "--font-roboto",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
-export const openSans = Open_Sans({
+const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -54,7 +54,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${roboto.variable} ${openSans.variable} h-full antialiased`}
+      className={`${poppins.variable} ${roboto.variable} ${openSans.variable}`}
     >
       <body>
         <Header />

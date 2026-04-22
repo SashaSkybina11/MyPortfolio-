@@ -3,7 +3,7 @@ import { skills } from "@/types/skills";
 
 const Page = () => {
   return (
-    <main className={`page-shell page-container ${css.main}`}>
+    <main className={css.main}>
       <div className={css.content}>
         <h1 className={css.title}>
           Hello World<span>!</span>

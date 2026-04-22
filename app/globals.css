@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.hide {
+  display: none;
+}
+
 :root {
   --grey: #212121;
   /* --orange: #ff7e21; */
@@ -25,6 +29,16 @@ textarea {
   font: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 html {
   height: 100%;
   margin: 0;
@@ -36,25 +50,26 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--white);
-  font-family: var(--font-family), sans-serif;
+  font-family: var(--font-family);
   overflow: hidden;
 
   opacity: 0;
   animation: fadeIn 4s ease forwards;
 }
 
-.page-shell {
-  height: calc(100vh - 130px);
-  padding-block: 60px 120px;
-  /* overflow: hidden; */
-}
+/* .page-shell {
+  /* меняй везде єто */
+/* height: calc(100vh - 130px);
+  padding: 60px 120px; */
+/* overflow: hidden; 
+} */
 
-.page-container {
+/* .page-container {
   width: 100%;
   margin: 0;
   padding-inline: 50px;
   scroll-snap-type: x mandatory;
-}
+} */
 
 @keyframes fadeIn {
   from {
