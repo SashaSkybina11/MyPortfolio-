@@ -6,7 +6,6 @@
 
 :root {
   --grey: #212121;
-  /* --orange: #ff7e21; */
   --rose: #ff21b9;
   --background: #0d0c0c;
   --white: #ffffff;
@@ -14,6 +13,7 @@
   --font-family: var(--font-poppins);
   --second-family: var(--font-roboto);
   --font-third: var(--font-open-sans);
+  --logo-font: var(--font-sour-gummy);
 }
 
 *,
@@ -51,7 +51,7 @@ body {
   background: var(--background);
   color: var(--white);
   font-family: var(--font-family);
-  overflow: hidden;
+  overflow-x: hidden;
 
   opacity: 0;
   animation: fadeIn 4s ease forwards;

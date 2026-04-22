@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Roboto, Open_Sans } from "next/font/google";
+import { Poppins, Roboto, Open_Sans, Sour_Gummy } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 
@@ -17,6 +17,12 @@ const roboto = Roboto({
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const sourGummy = Sour_Gummy({
+  variable: "--font-sour-gummy",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
@@ -54,7 +60,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${roboto.variable} ${openSans.variable}`}
+      className={`${poppins.variable} ${roboto.variable} ${openSans.variable} ${sourGummy.variable}`}
     >
       <body>
         <Header />

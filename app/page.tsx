@@ -13,6 +13,7 @@ const Page = () => {
           <span> Frontend</span> Developer.
         </p>
       </div>
+
       <div className={css.whiteLine}>
         <div className={css.track}>
           {[...skills, ...skills].map((skill, i) => (
@@ -23,6 +24,7 @@ const Page = () => {
           ))}
         </div>
       </div>
+
       <div className={css.grayLine}>
         <div className={css.track}>
           {[...skills, ...skills].reverse().map((skill, i) => (
