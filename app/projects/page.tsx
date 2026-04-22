@@ -35,8 +35,8 @@ const Page = () => {
   const isLastSlide = currentSlide === projects.length - 1;
 
   return (
-    <main className={`page-shell page-container ${css.containerProjects}`}>
-      <div className={css.whiteLine}>
+    <main className={css.containerProjects}>
+      {/* <div className={css.whiteLine}>
         <div className={css.track}>
           {[...skills, ...skills].map((skill, i) => (
             <div key={i} className={css.item}>
@@ -55,7 +55,7 @@ const Page = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <div className={css.contentProjects}>
         <h1 className={css.title}>projects</h1>
@@ -131,7 +131,7 @@ const Page = () => {
         )}
       </div>
 
-      <div className={css.behind}>projects</div>
+      {/* <div className={css.behind}>projects</div> */}
     </main>
   );
 };

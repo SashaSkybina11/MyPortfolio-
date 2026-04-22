@@ -4,8 +4,8 @@ import { skills } from "@/types/skills";
 
 const Page = () => {
   return (
-    <main className={`page-shell page-container ${css.containerAbout}`}>
-      <div className={css.whiteLine}>
+    <main className={css.containerAbout}>
+      {/* <div className={css.whiteLine}>
         <div className={css.track}>
           {[...skills, ...skills].map((skill, i) => (
             <div key={i} className={css.item}>
@@ -14,8 +14,8 @@ const Page = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className={css.grayLine}>
+      </div> */}
+      {/* <div className={css.grayLine}>
         <div className={css.track}>
           {[...skills, ...skills].reverse().map((skill, i) => (
             <div key={i} className={css.item}>
@@ -24,7 +24,7 @@ const Page = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       <div className={css.image}>
         <Image
           src="/avatar/my-photo.jpg"
@@ -57,7 +57,7 @@ const Page = () => {
           </p>
         </div>
       </div>
-      <div className={css.behind}>about</div>
+      {/* <div className={css.behind}>about</div> */}
     </main>
   );
 };

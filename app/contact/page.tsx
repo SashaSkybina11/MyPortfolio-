@@ -3,7 +3,7 @@ import css from "./Page.module.css";
 
 const Page = () => {
   return (
-    <main className={`page-shell page-container ${css.containerContact}`}>
+    <main className={css.containerContact}>
       <div className={css.contentContact}>
         <h1 className={css.title}>Contact</h1>
         <div className={css.descr}>
@@ -38,7 +38,7 @@ const Page = () => {
             </a>
           </div>
         </div>
-        <div className={css.whiteLine}>
+        {/* <div className={css.whiteLine}>
           <div className={css.track}>
             {[...skills, ...skills].map((skill, i) => (
               <div key={i} className={css.item}>
@@ -58,7 +58,7 @@ const Page = () => {
             ))}
           </div>
         </div>
-        <div className={css.behind}>Contact</div>
+        <div className={css.behind}>Contact</div> */}
       </div>
     </main>
   );
