@@ -245,7 +245,7 @@
   .whiteLine,
   .grayLine {
     display: block;
-
+    position: fixed;
     left: 50%;
     transform-origin: center;
     width: 120vw;
@@ -264,7 +264,7 @@
   }
 
   .grayLine {
-    position: absolute;
+    /* position: absolute; */
     left: 15%;
     transform: translate(-50%) rotate(316deg);
     background: var(--grey);
@@ -272,11 +272,11 @@
   }
 
   .whiteLine {
-    position: absolute;
+    /* position: absolute; */
     top: 100%;
-
     left: 40%;
     transform: translate(-50%, 50%) rotate(33deg);
+
     background: var(--white);
     z-index: 10;
   }
