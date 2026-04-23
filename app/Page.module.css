@@ -60,6 +60,14 @@
 
   border: 2px solid var(--grey);
   overflow: hidden;
+
+  box-shadow:
+    0 0 0 0 #000,
+    0 27px 58px 0 rgba(0, 0, 0, 0.98),
+    0 106px 106px 0 rgba(0, 0, 0, 0.85),
+    0 239px 143px 0 rgba(0, 0, 0, 0.5),
+    0 425px 170px 0 rgba(0, 0, 0, 0.15),
+    0 664px 186px 0 rgba(0, 0, 0, 0.02);
 }
 
 .grayLine {
@@ -346,6 +354,10 @@
     font-size: 150px;
   }
 
+  .descr {
+    margin-bottom: 20px;
+  }
+
   /* behind */
   .behind {
     top: -70px;
@@ -353,71 +365,25 @@
   }
 
   /* Lines */
-  .grayLine,
-  .whiteLine {
-    position: relative;
-    left: 50%;
-    transform-origin: center;
-
-    width: 120vw;
-    height: 80px;
-
-    border: 2px solid var(--grey);
-    overflow: hidden;
-  }
 
   .grayLine {
-    bottom: 90px;
-    transform: translateX(-40%) rotate(338deg);
+    transform: translateX(-40%) rotate(4deg);
     background: var(--grey);
-    z-index: 10;
   }
 
   .whiteLine {
-    margin-top: 0;
-    bottom: 440px;
-    transform: translateX(-30%) rotate(27deg);
-    background: var(--white);
-    z-index: 15;
+    margin: 0;
+    transform: translateX(-45%) rotate(331deg);
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .grayLine {
+    transform: translateX(-40%) rotate(4deg);
   }
 
-  .track {
-    display: flex;
-    white-space: nowrap;
-    width: max-content;
-
-    padding: 20px 0;
-    animation: scroll 40s linear infinite;
-  }
-
-  .grayLine .track {
-    animation: scrollRight 40s linear infinite;
-  }
-
-  .dot {
-    width: 17px;
-    height: 17px;
-    margin-right: 60px;
-    background: var(--rose);
-    border-radius: 50%;
-  }
-
-  .item {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-  }
-
-  .whiteText,
-  .grayText {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 24px;
-    text-transform: uppercase;
+  .whiteLine {
+    transform: translateX(-45%) rotate(338deg);
   }
 }
 
