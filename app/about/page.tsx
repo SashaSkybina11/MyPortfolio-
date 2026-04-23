@@ -5,7 +5,7 @@ import { skills } from "@/types/skills";
 const Page = () => {
   return (
     <main className={css.containerAbout}>
-      {/* <div className={css.whiteLine}>
+      <div className={css.whiteLine}>
         <div className={css.track}>
           {[...skills, ...skills].map((skill, i) => (
             <div key={i} className={css.item}>
@@ -14,8 +14,8 @@ const Page = () => {
             </div>
           ))}
         </div>
-      </div> */}
-      {/* <div className={css.grayLine}>
+      </div>
+      <div className={css.grayLine}>
         <div className={css.track}>
           {[...skills, ...skills].reverse().map((skill, i) => (
             <div key={i} className={css.item}>
@@ -24,28 +24,40 @@ const Page = () => {
             </div>
           ))}
         </div>
-      </div> */}
-      <div className={css.image}>
-        <Image
-          src="/avatar/my-photo.jpg"
-          alt="My photo"
-          fill
-          style={{ objectFit: "cover" }}
-        />
       </div>
+
       <div className={css.contentAbout}>
-        <h1 className={css.title}>about me</h1>
+        <div className={css.contentBox}>
+          <div className={css.image}>
+            <Image
+              src="/avatar/my-photo.jpg"
+              alt="My photo"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+          <h1 className={css.title}>about me</h1>
+        </div>
+        <div className={css.imageMobaliTablet}>
+          <Image
+            src="/avatar/my-photo.jpg"
+            alt="My photo"
+            fill
+            style={{ objectFit: "cover" }}
+          />
+        </div>
         <div className={css.descr}>
           <p>
-            Hello<span>!</span> My name is <span> Oleksandra</span>, I&#8217;m
-            24 years old. I&#8217;m a professional futsal player currently
-            playing in Spain and representing the Ukrainian national teams in
-            both futsal and beach soccer.
+            Hello<span>!</span> My name is
+            <span> Oleksandra</span>, I&#8217;m 24 years old. I&#8217;m a
+            professional futsal player currently playing in Spain and
+            representing the Ukrainian national teams in both futsal and beach
+            soccer.
           </p>
           <p>
-            Alongside my sports career, I&#8217;m also a Front-End Developer
-            passionate about building modern and user-friendly web applications.
-            I work with technologies such as
+            Alongside my sports career, I&#8217;m also a
+            <span> Front-End Developer </span>passionate about building modern
+            and user-friendly web applications. I work with technologies such as
             <span> JavaScript, React, Next.js, HTML, CSS, and REST APIs.</span>
           </p>
           <p>
@@ -57,7 +69,7 @@ const Page = () => {
           </p>
         </div>
       </div>
-      {/* <div className={css.behind}>about</div> */}
+      <div className={css.behind}>about</div>
     </main>
   );
 };

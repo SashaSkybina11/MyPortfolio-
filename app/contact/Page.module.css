@@ -387,7 +387,7 @@
 @media only screen and (min-width: 1280px) {
   .contentContact {
     max-width: 1280px;
-    padding: 40px 20px 0px 350px;
+    padding: 40px 20px 0px 320px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

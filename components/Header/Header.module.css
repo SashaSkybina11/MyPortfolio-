@@ -164,18 +164,18 @@
     padding: 24px 50px;
   }
 
-  .logoDescr span {
+  /* .logoDescr span {
     animation: none;
-  }
+  } */
   .mobileMenuBtn {
     display: none;
   }
 
   /* Logo */
-
+  /* 
   .logoDescr span:hover {
     transform: none;
-  }
+  } */
 
   /* Navigation */
 
