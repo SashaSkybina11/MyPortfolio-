@@ -180,6 +180,26 @@
     font-size: 30px;
     line-height: 170%;
   }
+
+  .behind {
+    display: block;
+    font-size: 270px;
+    top: 0;
+    left: 10%;
+
+    font-weight: 400;
+
+    line-height: 170%;
+    text-transform: lowercase;
+
+    color: transparent;
+    -webkit-text-stroke: 2px #363636;
+    user-select: none;
+    pointer-events: none;
+
+    position: absolute;
+    z-index: 0;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -319,23 +339,10 @@
   /* #endregion */
 
   .behind {
-    display: block;
-    font-size: 454px;
+    font-size: 350px;
     top: 0;
     left: 10%;
-
-    font-weight: 400;
-
-    line-height: 170%;
-    text-transform: lowercase;
-
-    color: transparent;
-    -webkit-text-stroke: 2px #363636;
-    user-select: none;
-    pointer-events: none;
-
-    position: absolute;
-    z-index: 0;
+    transform: none;
   }
 }
 
@@ -360,6 +367,7 @@
 
   /* behind */
   .behind {
+    font-size: 454px;
     top: -70px;
     left: 10%;
   }
