@@ -387,11 +387,11 @@
 
   .title::after {
     width: 61px;
-    margin: 12px 0 0;
+    margin: 16px 0 0;
   }
 
   .navigationWrapper {
-    max-width: 620px;
+    max-width: 660px;
     position: relative;
     margin: 0 auto;
   }
@@ -402,7 +402,7 @@
   }
 
   .slide {
-    min-width: 540px;
+    min-width: 580px;
   }
 
   .card {
@@ -443,6 +443,14 @@
 
   .arrowButton {
     top: 50%;
+  }
+
+  .arrowLeft {
+    left: 15px;
+  }
+
+  .arrowRight {
+    right: 15px;
   }
 
   .points {
@@ -581,6 +589,18 @@
 
   .contentProjects {
     max-width: 1280px;
+    padding: 40px;
+  }
+
+  .card {
+    width: 420px;
+    max-width: none;
+  }
+
+  .cardImg {
+    height: 260px;
+    max-width: none;
+    width: 100%;
   }
 
   .btnInfoMore {
@@ -596,6 +616,14 @@
   .btnInfoMore:hover {
     background-color: rgb(223, 25, 114);
     transform: scale(1.05);
+  }
+
+  .arrowLeft {
+    left: 0;
+  }
+
+  .arrowRight {
+    right: 0;
   }
 
   .behind {
