@@ -633,6 +633,6 @@
   }
 
   .whiteLine {
-    bottom: 5%;
+    transform: translate(-50%) rotate(9deg);
   }
 }

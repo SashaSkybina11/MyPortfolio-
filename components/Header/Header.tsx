@@ -4,6 +4,8 @@ import Link from "next/link";
 import css from "./Header.module.css";
 import { usePathname } from "next/navigation";
 import { RiMenu4Line } from "react-icons/ri";
+import { useState } from "react";
+import MobileMenu from "../MobileMenu/MobileMenu";
 
 const navItems = [
   { href: "/", label: "home" },
@@ -13,6 +15,7 @@ const navItems = [
 ];
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   return (
     <header className={css.header}>
@@ -78,9 +81,17 @@ const Header = () => {
             <span>a</span>
           </p>
         </Link>
-        <button type="button" className={css.mobileMenuBtn}>
+        <button
+          type="button"
+          className={css.mobileMenuBtn}
+          onClick={() => setIsOpen(true)}
+        >
           <RiMenu4Line size={36} />
         </button>
+
+        {/* Mobile menu */}
+        <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} navItems={navItems} />
+
         <nav className={css.navWrap}>
           <ul className={css.nav}>
             {navItems.map((item) => {

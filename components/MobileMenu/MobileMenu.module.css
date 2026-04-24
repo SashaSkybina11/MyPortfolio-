@@ -1,0 +1,41 @@
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 70%;
+  height: 100vh;
+  padding: 100px 20px;
+  background: var(--background);
+  z-index: 9999;
+
+  transform: translateX(0);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9998;
+}
+
+.mobileMenu.open {
+  transform: translateX(0);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+}
+
+.mobileLink {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.mobileLink:active {
+  color: var(--rose);
+}
