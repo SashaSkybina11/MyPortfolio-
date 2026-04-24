@@ -5,9 +5,8 @@
   position: fixed;
   z-index: 5;
 
-  /* background-color: transparent; */
   border-bottom: 2px solid rgba(255, 0, 157, 0.292);
-  background: rgba(0, 0, 0, 0.35);
+  background: var(--background);
 }
 
 .containerHeader {

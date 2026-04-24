@@ -59,6 +59,7 @@
   min-width: 320px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -274,38 +275,28 @@
 
 @media only screen and (min-width: 768px) {
   .containerProjects {
-    position: relative;
+    max-width: 768px;
+    padding: 100px 16px 40px;
   }
 
   .contentProjects {
-    max-width: 840px;
-    margin-left: auto;
-    margin-right: 40px;
-    padding-top: 120px;
-    position: relative;
-    z-index: 3;
+    padding: 20px 12px;
+    margin: 0 auto;
   }
 
   .title {
-    font-size: 40px;
-    text-transform: uppercase;
+    font-size: 50px;
     margin-bottom: 70px;
+    color: var(--white);
+    text-align: center;
   }
 
   .title::after {
-    content: "";
-    display: block;
-    width: 61px;
-    height: 1px;
-    background-color: var(--rose);
-    margin-top: 12px;
+    width: 140px;
   }
 
   .navigationWrapper {
-    position: relative;
-    z-index: 10;
-    width: 760px;
-    margin-left: 0 auto;
+    max-width: 768px;
   }
 
   .slider {
@@ -314,13 +305,108 @@
   }
 
   .slide {
-    min-width: 500px;
-    display: flex;
-    justify-content: center;
+    min-width: 768px;
   }
 
   .card {
-    width: 500px;
+    max-width: 650px;
+    height: 424px;
+    margin: 0 4px;
+  }
+
+  .cardLink {
+  }
+
+  .cardMedia {
+    margin-bottom: 24px;
+  }
+
+  .cardImg {
+    height: 280px;
+  }
+
+  .cardDescr {
+    font-size: 16px;
+  }
+
+  .cardName {
+    font-size: 24px;
+  }
+
+  .btnInfoMore {
+    height: 52px;
+    font-size: 16px;
+  }
+
+  /* Lines */
+
+  .whiteLine,
+  .grayLine {
+    display: none;
+  }
+
+  /* Content behind */
+
+  .behind {
+    display: block;
+    font-size: 270px;
+
+    font-weight: 400;
+
+    line-height: 170%;
+    text-transform: lowercase;
+
+    color: transparent;
+    -webkit-text-stroke: 2px #363636;
+    user-select: none;
+    pointer-events: none;
+
+    position: absolute;
+    z-index: 0;
+
+    top: 0;
+    left: 10%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .containerProjects {
+    max-width: 1024px;
+    padding: 120px 20px 0px 350px;
+  }
+
+  .contentProjects {
+    max-width: 1024px;
+    padding: 20px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+    text-align: left;
+  }
+
+  .title::after {
+    width: 61px;
+    margin: 12px 0 0;
+  }
+
+  .navigationWrapper {
+    max-width: 620px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .slider {
+    z-index: 3;
+    width: 100%;
+  }
+
+  .slide {
+    min-width: 540px;
+  }
+
+  .card {
+    margin: 0 24px;
   }
 
   .cardLink {
@@ -335,194 +421,51 @@
     border-radius: 10px;
   }
 
-  .cardMedia::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.1),
-      transparent
-    );
-    opacity: 0;
-    transition: opacity 400ms ease;
-  }
-
-  .cardLink:hover .cardMedia::after {
-    opacity: 1;
-  }
-
   .cardImg {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    filter: blur(1.2px);
-
-    /* filter: brightness(0.75); */
-    transition: all 0.3s ease;
+    height: 260px;
   }
 
   .cardDescr {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 175%;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: var(--white);
-    background-color: var(--rose);
-
-    padding: 30px;
-
-    position: absolute;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    transform: translateY(100%);
-
-    opacity: 0;
-    filter: blur(6px);
-    transition:
-      transform 600ms cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 400ms ease,
-      filter 600ms ease;
-  }
-
-  .cardLink:hover .cardDescr {
-    transform: translateY(0);
-    opacity: 1;
-    filter: blur(0);
-  }
-
-  .cardLink:hover .cardImg {
-    transform: scale(1.08);
+    font-size: 18px;
+    padding: 36px;
   }
 
   .cardName {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 175%;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--white);
-    text-align: center;
+    font-size: 24px;
+    margin-bottom: 16px;
   }
 
-  .points {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding-top: 30px;
-    max-width: 760px;
-  }
-
-  .point {
-    border: none;
-    width: 10px;
-    height: 10px;
-    background: var(--rose);
-    border-radius: 50%;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .point:focus-visible {
-    outline: 2px solid var(--white);
-    outline-offset: 4px;
-  }
-
-  .pointActive {
-    background: #fa37d6;
-    transform: scale(1.2);
+  .btnInfoMore {
+    width: 120px;
+    height: 52px;
+    font-size: 16px;
   }
 
   .arrowButton {
-    position: absolute;
     top: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    transform: translateY(-50%);
-    z-index: 4;
   }
 
-  .arrowLeft {
-    left: 0;
-  }
-
-  .arrowRight {
-    right: 0;
-  }
-
-  .arrowButton:disabled {
-    cursor: default;
-  }
-
-  .arrowIcon {
-    width: 30px;
-    height: 30px;
-    fill: var(--white);
-  }
-
-  .arrowDisabled {
-    fill: rgba(255, 255, 255, 0.5);
+  .points {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   /* Lines */
 
   .whiteLine,
   .grayLine {
-    user-select: none;
-  }
+    display: block;
+    position: fixed;
+    left: 50%;
+    transform-origin: center;
+    width: 120vw;
+    height: 80px;
 
-  .whiteLine {
-    z-index: 20;
-  }
-  .grayLine {
-    z-index: 15;
-  }
+    border: 2px solid var(--grey);
+    overflow: hidden;
 
-  .whiteLine {
-    position: absolute;
-
-    width: 2200px;
-    height: 95px;
-
-    top: 50%;
-
-    transform: translate(-45%, 80%) rotate(195deg);
-    background: var(--white);
-
-    border: 5px solid var(--grey);
-    /* box-shadow:
-      0 0 0 0 #000,
-      0 27px 58px 0 rgba(0, 0, 0, 0.98),
-      0 106px 106px 0 rgba(0, 0, 0, 0.85),
-      0 239px 143px 0 rgba(0, 0, 0, 0.5),
-      0 425px 170px 0 rgba(0, 0, 0, 0.15),
-      0 664px 186px 0 rgba(0, 0, 0, 0.02); */
-  }
-
-  .grayLine {
-    position: absolute;
-
-    width: 2000px;
-    height: 90px;
-
-    transform: translate(-40%, 40%) rotate(299deg);
-
-    background-color: var(--grey);
     box-shadow:
       0 0 0 0 #000,
       0 27px 58px 0 rgba(0, 0, 0, 0.98),
@@ -530,6 +473,21 @@
       0 239px 143px 0 rgba(0, 0, 0, 0.5),
       0 425px 170px 0 rgba(0, 0, 0, 0.15),
       0 664px 186px 0 rgba(0, 0, 0, 0.02);
+  }
+
+  .grayLine {
+    transform: translate(-75%) rotate(293deg);
+
+    background: var(--grey);
+    z-index: 10;
+  }
+
+  .whiteLine {
+    bottom: 0;
+    transform: translate(-50%) rotate(8deg);
+
+    background: var(--white);
+    z-index: 15;
   }
 
   .track {
@@ -559,19 +517,7 @@
     gap: 60px;
   }
 
-  .whiteText {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 30px;
-    text-transform: uppercase;
-    color: var(--grey);
-    transform: rotate(180deg);
-  }
-
+  .whiteText,
   .grayText {
     display: flex;
     align-items: center;
@@ -579,8 +525,15 @@
 
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 30px;
+    font-size: 24px;
     text-transform: uppercase;
+  }
+
+  .whiteText {
+    color: var(--grey);
+  }
+
+  .grayText {
     color: var(--white);
   }
 
@@ -615,20 +568,43 @@
   /* Content behind */
 
   .behind {
-    font-weight: 400;
+    top: 0;
+    left: 10%;
+    font-size: 300px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .containerProjects {
+    max-width: 1280px;
+  }
+
+  .contentProjects {
+    max-width: 1280px;
+  }
+
+  .btnInfoMore {
+    width: 120px;
+    height: 52px;
+    font-size: 16px;
+
+    transition:
+      transform 0.6s ease,
+      background-color 0.2s ease;
+  }
+
+  .btnInfoMore:hover {
+    background-color: rgb(223, 25, 114);
+    transform: scale(1.05);
+  }
+
+  .behind {
     font-size: 454px;
-    line-height: 170%;
-    text-transform: lowercase;
+    top: -70px;
+    left: 10%;
+  }
 
-    position: absolute;
-    top: -205px;
-    left: 170px;
-
-    color: transparent;
-    -webkit-text-stroke: 2px #363636;
-
-    user-select: none;
-
-    z-index: 0;
+  .whiteLine {
+    bottom: 5%;
   }
 }
