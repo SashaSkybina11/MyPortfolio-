@@ -30,13 +30,13 @@ const Page = () => {
       spacing: 0,
     },
   });
-
+  const [openedCard, setOpenedCard] = useState<string | null>(null);
   const isFirstSlide = currentSlide === 0;
   const isLastSlide = currentSlide === projects.length - 1;
 
   return (
     <main className={css.containerProjects}>
-      {/* <div className={css.whiteLine}>
+      <div className={css.whiteLine}>
         <div className={css.track}>
           {[...skills, ...skills].map((skill, i) => (
             <div key={i} className={css.item}>
@@ -55,7 +55,7 @@ const Page = () => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
 
       <div className={css.contentProjects}>
         <h1 className={css.title}>projects</h1>
@@ -71,7 +71,9 @@ const Page = () => {
                     href={project.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={css.cardLink}
+                    className={`${css.cardLink} ${
+                      openedCard === project.name ? css.activeCard : ""
+                    }`}
                   >
                     <div className={css.cardMedia}>
                       <Image
@@ -81,10 +83,22 @@ const Page = () => {
                         width={350}
                         height={200}
                       />
+
                       <p className={css.cardDescr}>{project.descr}</p>
                     </div>
                     <p className={css.cardName}>{project.name}</p>
                   </a>
+                  <button
+                    className={css.btnInfoMore}
+                    type="button"
+                    onClick={() =>
+                      setOpenedCard(
+                        openedCard === project.name ? null : project.name,
+                      )
+                    }
+                  >
+                    Info more
+                  </button>
                 </article>
               </div>
             ))}
@@ -131,7 +145,7 @@ const Page = () => {
         )}
       </div>
 
-      {/* <div className={css.behind}>projects</div> */}
+      <div className={css.behind}>projects</div>
     </main>
   );
 };

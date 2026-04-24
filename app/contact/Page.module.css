@@ -207,6 +207,7 @@
   .title {
     font-size: 50px;
     margin-bottom: 70px;
+    color: var(--white);
   }
 
   .title::after {

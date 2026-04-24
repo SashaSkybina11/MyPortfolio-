@@ -108,6 +108,7 @@
 
   .title {
     font-size: 50px;
+    color: var(--white);
   }
 
   .title::after {
