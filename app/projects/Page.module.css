@@ -1,6 +1,6 @@
 .containerProjects {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   min-height: 100vh;
   margin: 0 auto;
   padding: 100px 16px 40px;

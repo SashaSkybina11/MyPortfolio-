@@ -4,7 +4,7 @@ import Link from "next/link";
 import css from "./Header.module.css";
 import { usePathname } from "next/navigation";
 import { RiMenu4Line } from "react-icons/ri";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 
 const navItems = [
@@ -17,6 +17,8 @@ const navItems = [
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
+  const mobileMenuButtonRef = useRef<HTMLButtonElement>(null);
+
   return (
     <header className={css.header}>
       <div className={css.containerHeader}>
@@ -68,7 +70,7 @@ const Header = () => {
             </a>
           </li>
         </ul>
-        <Link href="/" className={css.logo}>
+        <Link href="/" className={css.logo} transitionTypes={["site-nav"]}>
           <p className={css.logoDescr}>
             <span>O</span>
             <span className={css.dot}>.</span>
@@ -82,15 +84,24 @@ const Header = () => {
           </p>
         </Link>
         <button
+          ref={mobileMenuButtonRef}
           type="button"
           className={css.mobileMenuBtn}
           onClick={() => setIsOpen(true)}
+          aria-label="Open navigation menu"
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
         >
-          <RiMenu4Line size={36} />
+          <RiMenu4Line size={36} aria-hidden="true" />
         </button>
 
         {/* Mobile menu */}
-        <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} navItems={navItems} />
+        <MobileMenu
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          navItems={navItems}
+          triggerRef={mobileMenuButtonRef}
+        />
 
         <nav className={css.navWrap}>
           <ul className={css.nav}>
@@ -101,9 +112,11 @@ const Header = () => {
                 <li key={item.href} className={css.item}>
                   <Link
                     href={item.href}
+                    transitionTypes={["site-nav"]}
                     className={`${css.itemLink} ${
                       isActive ? css.itemLinkActive : ""
                     }`}
+                    aria-current={isActive ? "page" : undefined}
                   >
                     {item.label}
 

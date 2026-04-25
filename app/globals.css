@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-.hide {
-  display: none;
-}
-
 :root {
   --grey: #212121;
   --rose: #ff21b9;
@@ -53,30 +49,80 @@ body {
   color: var(--white);
   font-family: var(--font-family);
   overflow-x: hidden;
-
-  opacity: 0;
-  animation: fadeIn 4s ease forwards;
 }
 
-/* .page-shell {
-  /* меняй везде єто */
-/* height: calc(100vh - 130px);
-  padding: 60px 120px; */
-/* overflow: hidden; 
-} */
+:root {
+  /* Это длительность ухода старой страницы */
+  --vt-exit-duration: 120ms;
+  /* Это длительность появления новой */
+  --vt-enter-duration: 500ms;
+  /*  задержка перед появлением новой страницы */
+  --vt-delay: 100ms;
+  /* стартовое смещение новой страницы */
+  --vt-shift-in: 0;
+  /* смещение старой страницы при уходе */
+  --vt-shift-out: 0;
+}
 
-/* .page-container {
-  width: 100%;
-  margin: 0;
-  padding-inline: 50px;
-  scroll-snap-type: x mandatory;
-} */
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  ::view-transition-old(.page-exit) {
+    animation:
+      var(--vt-exit-duration) ease-in both vt-fade-out,
+      260ms cubic-bezier(0.22, 1, 0.36, 1) both vt-slide-out;
+  }
 
-@keyframes fadeIn {
+  ::view-transition-new(.page-enter) {
+    animation:
+      var(--vt-enter-duration) ease-out var(--vt-delay) both vt-fade-in,
+      320ms cubic-bezier(0.22, 1, 0.36, 1) var(--vt-delay) both vt-slide-in;
+  }
+}
+
+@keyframes vt-fade-out {
+  from {
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    opacity: 0;
+    filter: blur(6px);
+  }
+}
+
+@keyframes vt-fade-in {
   from {
     opacity: 0;
+    filter: blur(8px);
   }
   to {
     opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes vt-slide-out {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(var(--vt-shift-out));
+  }
+}
+
+@keyframes vt-slide-in {
+  from {
+    transform: translateY(var(--vt-shift-in));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
   }
 }

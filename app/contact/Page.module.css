@@ -15,7 +15,6 @@
   color: var(--white);
 
   text-align: center;
-  user-select: none;
 
   position: relative;
   z-index: 1;
@@ -415,8 +414,8 @@
   }
 
   .descrIcon {
-    width: 30;
-    height: 30;
+    width: 30px;
+    height: 30px;
   }
 
   .descrTitle {

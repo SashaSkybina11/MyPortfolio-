@@ -44,6 +44,25 @@
   animation: logoWave 3s ease-in-out infinite;
 }
 
+.mobileMenuBtn {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.mobileMenuBtn:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
+  border-radius: 10px;
+}
+
 .logoDescr span:nth-child(1) {
   animation-delay: 0s;
 }
@@ -109,6 +128,13 @@
     align-items: center;
   }
 
+  .socialLink a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+
   .icon {
     fill: var(--rose);
     transition:
@@ -121,7 +147,12 @@
     transform: scale(1.3);
   }
 
-  .icon:focus {
+  .socialLink a:focus-visible {
+    outline: 2px solid var(--white);
+    outline-offset: 4px;
+  }
+
+  .socialLink a:focus-visible .icon {
     fill: rgb(255, 192, 74);
   }
 
@@ -163,18 +194,9 @@
     padding: 24px 50px;
   }
 
-  /* .logoDescr span {
-    animation: none;
-  } */
   .mobileMenuBtn {
     display: none;
   }
-
-  /* Logo */
-  /* 
-  .logoDescr span:hover {
-    transform: none;
-  } */
 
   /* Navigation */
 
@@ -247,6 +269,13 @@
 
   .itemLink:hover {
     color: var(--rose);
+  }
+
+  .itemLink:focus-visible {
+    color: var(--rose);
+    outline: 2px solid var(--rose);
+    outline-offset: 6px;
+    border-radius: 999px;
   }
 
   .itemLinkActive {

@@ -2,13 +2,17 @@
   position: fixed;
   top: 0;
   right: 0;
-
   width: 70%;
   height: 100vh;
-  padding: 100px 20px;
+  padding: 120px 20px;
   background: var(--background);
   z-index: 9999;
 
+  transform: translateX(100%);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobileMenu.open {
   transform: translateX(0);
 }
 
@@ -17,10 +21,44 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
   z-index: 9998;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
-.mobileMenu.open {
-  transform: translateX(0);
+.overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileBtn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.mobileBtn:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 4px;
+}
+
+.mobileIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--rose);
+}
+
+.mobileIcon:active {
+  transform: scale(0.96);
+  opacity: 0.9;
 }
 
 .mobileNav {
@@ -31,11 +69,19 @@
 }
 
 .mobileLink {
+  display: inline-block;
   font-size: 24px;
   text-transform: uppercase;
   color: var(--white);
+  border-radius: 10px;
 }
 
 .mobileLink:active {
   color: var(--rose);
+}
+
+.mobileLink:focus-visible {
+  color: var(--rose);
+  outline: 2px solid var(--rose);
+  outline-offset: 6px;
 }
